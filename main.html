@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login Form</title>
+  <title>Form Login 2</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -107,12 +107,17 @@
 
   <script>
     function handleSubmit() {
-      const inputs = document.querySelectorAll('input');
-      let message = '';
-      inputs.forEach(input => {
-        message += `${input.name}: ${input.value} `;
-      });
-      alert(message.trim());
+      const firstName   = document.querySelector('input[name="First Name"]').value;
+      const lastName    = document.querySelector('input[name="Last Name"]').value;
+      const phoneNumber = document.querySelector('input[name="Phone Number"]').value;
+      const emailID     = document.querySelector('input[name="Email ID"]').value;
+
+      alert(
+        "First Name: " + firstName + " " +
+        "Last Name: " + lastName + " " +
+        "Phone Number: " + phoneNumber + " " +
+        "Email ID: " + emailID
+      );
     }
   </script>
 
